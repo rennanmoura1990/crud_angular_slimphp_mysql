@@ -1,0 +1,22 @@
+<h2>Adicionar Novo Jogo</h2>
+<div class="row">
+  <div class="col-md-6">
+  <form name="AddNewForm" id="add-new-form" method="post" action="">
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input class="form-control" type="text" ng-model="jogo.nome" required />
+    </div>
+	<div class="form-group">
+      <label for="status">Status:</label>
+      <input class="form-control" type="text" ng-model="jogo.status" required /><b>(1 - Jogando|2- Jogado|3- A Jogar)</b>
+    </div> 
+	<div class="form-group">
+      <label for="console">Console:</label>
+      <input class="form-control" type="text" ng-model="jogo.console" required /><a href="#/listconsole" class="btn">Ver Consoles</a>
+    </div>
+    <button class="btn btn-primary" ng-disabled="AddNewForm.$invalid || isUnchanged(jogo)" id="add-new-btn" ng-click="add_jogo(jogo)">Cadastrar!</button>
+    <a href="#/listjogo" class="btn btn-primary">Cancelar</a>
+	<a href="#/" class="btn btn-primary">Voltar ao Menu Principal</a>
+  </form>
+</div>
+</div>

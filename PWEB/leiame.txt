@@ -1,0 +1,33 @@
+Professor Chicout,para fazer o projeto,me basei no exemplo do link abaixo :
+https://github.com/lucentx/angular-crud
+
+Porém,ele estava bugado na parte do Slim (não fazia nem get,post,put,delete) e do HTML e consertei os bugs.
+Mudei de :
+$request = Slim::getInstance()->request();
+para :
+$request = \Slim\Slim::getInstance()->request();
+
+e na parte de alterar,estava o method como "post",eu coloquei em "put".
+Estava assim :
+<form novalidate ng-repeat="jogo in jogos" name="AddNewForm" id="add-new-form" method="post" action="">
+E coloquei assim :
+<form novalidate ng-repeat="jogo in jogos" name="AddNewForm" id="add-new-form" method="put" action="">
+
+Também foi acrescentado,Inner Joins no Slim,para os registros de jogos (Atualmente Jogando,Jogado,À jogar)
+
+Também coloquei uma busca em todas as listas,usando um ng-model "search" :
+Ficando assim :
+Busca : <input type="text" ng-model="search.nome"> (o nome seria relacionado ao nome do jogo ou do console)
+<Cabeçalho da tabela>
+<tr ng-repeat="jogo in jogos | filter: search"> (na parte que ele preenche a tabela)
+
+No Slim coloquei :
+"$app->response()->header('Content-Type', 'application/json;charset=utf-8');" 
+para me retornar as respostas em JSON
+
+Professor Chicout,desejo Boas Festas e um ótimo Ano Novo!
+ 
+
+
+
+

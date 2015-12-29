@@ -1,0 +1,24 @@
+<h2>Lista de Jogos</h2>
+Busca : <input type="text" ng-model="search.nome">
+<table class="table table-condensed">
+  <thead>
+    <tr>
+	  <th>ID</th>
+      <th>Nome</th>
+	  <th>Status</th>
+	  <th>ID Console</th>
+	  <th>Opções</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="jogo in jogos | filter: search">
+	  <td>{{jogo.id}}</td>
+	  <td>{{jogo.nome}}</td>
+	  <td>{{jogo.status}}</td>
+	  <td>{{jogo.console}}</td>
+      <td><a href="#/editjogo/{{jogo.id}}" class="btn btn-default btn-sm"><i class="glyphicon glyphicon-pencil"></i></button></td>
+    </tr>
+  </tbody>
+</table>
+<a class="btn btn-primary" href="#/addjogo">Cadastrar!</a>
+<a href="#/" class="btn btn-primary">Voltar ao Menu Principal</a>

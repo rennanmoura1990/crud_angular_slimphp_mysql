@@ -1,0 +1,19 @@
+<h2>Lista de Jogos À Jogar</h2>
+Busca : <input type="text" ng-model="search.nome">
+<table class="table table-condensed">
+  <thead>
+    <tr>
+	  <th>Nome</th>
+      <th>Status</th>
+	  <th>Console</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="jogo in ajogar | filter : search">
+	  <td>{{jogo.nome}}</td>
+	  <td>{{jogo.status}}</td>
+	  <td>{{jogo.console}}</td>
+    </tr>
+  </tbody>
+</table>
+<a class="btn btn-primary" href="#/">Voltar!</a>
