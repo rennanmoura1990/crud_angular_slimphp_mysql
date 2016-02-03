@@ -11,7 +11,13 @@ O projeto foi estruturado da seguinte maneira :
 <li>3. Controller = AngularJS (Framework de JavaScript)</li>
 </ul>
 
-Frotend
-1.Html 5
-2.CSS
-3.Bootstrap
+<strong>Frotend</strong>
+<ul>
+<li>1.Html 5</li>
+<li>2.CSS</li>
+<li>3.Bootstrap</li>
+</ul>
+
+
+
+
